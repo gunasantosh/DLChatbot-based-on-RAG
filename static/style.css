@@ -1,0 +1,86 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #f5f5f5;
+}
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-top: 56px; /* Height of the navbar */
+    overflow-y: auto;
+    margin: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+.chat-container {
+    display: flex;
+    flex-direction: column-reverse;
+    height: 100%;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+}
+.input-container {
+    position: fixed;
+    bottom: 0;
+    width: calc(100% - 40px);
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    padding: 10px;
+    box-shadow: 0 -1px 5px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+.message {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    white-space: pre-wrap; /* To handle formatting with line breaks */
+}
+.user-message {
+    background-color: #d1ecf1;
+    align-self: flex-end;
+}
+.bot-message {
+    background-color: #e2e3e5;
+    align-self: flex-start;
+}
+.typing-indicator {
+    display: none;
+    align-self: flex-start;
+    font-style: italic;
+}
+.input-group-custom {
+    position: relative;
+}
+.input-group-custom input {
+    border: none;
+    border-radius: 30px;
+    padding-left: 20px;
+    padding-right: 60px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    font-size: 14px;
+    width: 100%;
+    height: 40px; /* Smaller height */
+}
+.input-group-custom button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background-color: transparent;
+    font-size: 24px;
+    color: #007bff;
+    cursor: pointer;
+}
+.input-group-custom button:hover {
+    color: #0056b3;
+}
